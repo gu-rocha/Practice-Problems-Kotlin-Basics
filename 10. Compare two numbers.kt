@@ -1,18 +1,10 @@
 fun main() {
-    // Test cases
-    val result1 = hasSpentMoreTimeToday(300, 250) // Should return true
-    val result2 = hasSpentMoreTimeToday(300, 300) // Should return false
-    val result3 = hasSpentMoreTimeToday(200, 220) // Should return false
-    val result4 = hasSpentMoreTimeToday(221, 220) // Should return true
-   
-    // Print the results
-    println("Result 1: $result1") 
-    println("Result 2: $result2") 
-    println("Result 3: $result3") 
-    println("Result 4: $result4")     
+    println("Have I spent more time using my phone today: ${compareTime(300, 250)}")
+    println("Have I spent more time using my phone today: ${compareTime(300, 300)}")
+    println("Have I spent more time using my phone today: ${compareTime(200, 220)}")
+    println("Have I spent more time using my phone today: ${compareTime(221, 220)}")
 }
 
-fun hasSpentMoreTimeToday(timeSpentToday: Int, timeSpentYesterday: Int): Boolean {
-    // Compare the time spent today with the time spent yesterday
+fun compareTime(timeSpentToday: Int, timeSpentYesterday: Int): Boolean {
     return timeSpentToday > timeSpentYesterday
 }
