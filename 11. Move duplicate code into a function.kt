@@ -23,19 +23,15 @@ fun main() {
 */
 
 fun main() {
-    val cities = listOf(
-        City("Ankara", 27, 31, 82),
-        City("Tokyo", 32, 36, 10),
-        City("Cape Town", 59, 64, 2),
-        City("Guatemala City", 50, 55, 7)
-    )
-
-    for (city in cities) {
-        println("City: ${city.name}")
-        println("Low temperature: ${city.lowTemp}, High temperature: ${city.highTemp}")
-        println("Chance of rain: ${city.chanceOfRain}%")
-        println()
-    }
+    printWeatherForCity("Ankara", 27, 31, 82)
+    printWeatherForCity("Tokyo", 32, 36, 10)
+    printWeatherForCity("Cape Town", 59, 64, 2)
+    printWeatherForCity("Guatemala City", 50, 55, 7)
 }
 
-data class City(val name: String, val lowTemp: Int, val highTemp: Int, val chanceOfRain: Int)
+fun printWeatherForCity(cityName: String, lowTemp: Int, highTemp: Int, chanceOfRain: Int) {
+    println("City: $cityName")
+    println("Low temperature: $lowTemp, High temperature: $highTemp")
+    println("Chance of rain: $chanceOfRain%")
+    println()
+}
