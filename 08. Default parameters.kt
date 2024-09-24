@@ -42,11 +42,6 @@ fun main() {
     println()
 }
 
-fun displayAlertMessage(emailId: String): String {
-    val noOperatingSystem = "Unknow OS"
-    return "There's a new sign-in request on $noOperatingSystem for your Google Account $emailId."
-}
-
-fun displayAlertMessage(operatingSystem: String, emailId: String): String {
+fun displayAlertMessage(operatingSystem: String = "Unknown OS", emailId: String): String {
     return "There's a new sign-in request on $operatingSystem for your Google Account $emailId."
 }
